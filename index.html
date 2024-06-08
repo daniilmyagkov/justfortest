@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Монетка</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    #counter {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #coin {
+      width: 150px;
+      height: 150px;
+      background-image: url('https://sun1-23.userapi.com/s/v1/ig2/PLrrIcbGh615c5KW754k1ZwFRkJn78Hc9RgD9lUChl5ILs5QN_iF8gm3w93zQ_uHr5hCg7KCYdtr4rUva5hKd9QD.jpg?quality=95&crop=96,240,603,603&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&u=aYo4VDMKNBkoF4iaTP9IhxA9nHLUdrEsex7r-tJ_lvM&cs=200x200');
+      background-size: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="counter">0</div>
+  <div id="coin"></div>
+
+  <script>
+    const counterElement = document.getElementById('counter');
+    const coinElement = document.getElementById('coin');
+    let count = 0;
+
+    coinElement.addEventListener('click', () => {
+      count++;
+      counterElement.textContent = count;
+    });
+  </script>
+</body>
+</html>
