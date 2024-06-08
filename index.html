@@ -1,63 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Монеткаa</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-    }
-
-    #counter {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    #coin-container {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    #coin {
-      width: 250px;
-      height: 250px;
-      background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/1221393/pub_5d52f07a0ce57b00c1d82b6b_5d52f0dc4735a600ae103688/scale_1200');
-      background-size: cover;
-      border-radius: 50%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notcoin Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="counter">0</div>
-  <div id="coin-container">
-    <div id="coin"></div>
-  </div>
-
-  <script>
-    const counterElement = document.getElementById('counter');
-    const coinContainer = document.getElementById('coin-container');
-    let count = 0;
-
-    coinContainer.addEventListener('click', () => {
-      count++;
-      counterElement.textContent = count;
-    });
-  </script>
+    <div class="container">
+        <div class="header">
+            <div class="coin-icon">💰</div>
+            <div class="coin-count" id="coinCount">0</div>
+        </div>
+        <div class="main-button" id="mineButton">
+            <div class="coin-symbol">⚠️</div>
+        </div>
+        <div class="footer">
+            <div class="energy" id="energyCount">5500 ⚡</div>
+            <div class="actions">
+                <button class="action-btn" id="earnEnergyButton">Earn Energy</button>
+                <button class="action-btn">Boost</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
